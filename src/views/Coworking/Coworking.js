@@ -12,6 +12,8 @@ import { ContactForm } from 'common';
 import { Section, SectionAlternate } from 'components/organisms';
 import {
   Advantages,
+  FeaturedProperties,
+  Form,
   Application,
   Community,
   Events,
@@ -20,15 +22,18 @@ import {
   MapHero,
   Props,
   Reviews,
+  ReviewsV2,
   Spaces,
 } from './components';
 
 import {
   mapData,
   advantages,
+  featuredProperties,
   locations,
   properties,
   reviews,
+  reviewsV2,
   events,
   gallery,
 } from './data';
@@ -93,50 +98,18 @@ const Coworking = () => {
       <SectionAlternate>
         <Advantages data={advantages} />
       </SectionAlternate>
-      <Section>
-        <Locations data={locations} />
-      </Section>
       <Divider />
-      <Section>
-        <Spaces />
-      </Section>
       <SectionAlternate>
-        <Props data={properties} />
+        <FeaturedProperties data={featuredProperties} />
       </SectionAlternate>
-      <MapHero data={mapData} />
-      <Section>
-        <Reviews data={reviews} />
-      </Section>
       <Divider />
-      <Section>
-        <Application />
-      </Section>
       <SectionAlternate>
-        <Events data={events} />
+        <ReviewsV2 data={reviewsV2} />
       </SectionAlternate>
-      <Section narrow>
-        <Community data={gallery} />
-      </Section>
       <Divider />
-      <AppBar position="fixed" className={classes.appBarBottom}>
-        <Toolbar disableGutters className={classes.toolbarBottom}>
-          <IconButton
-            className={classes.chatIconButton}
-            onClick={handleBottombarOpen}
-          >
-            <ForumIcon className={classes.forumIcon} />
-          </IconButton>
-          <Drawer
-            anchor="bottom"
-            open={openBottombar}
-            onClose={handleBottombarClose}
-          >
-            <div className={classes.contactForm}>
-              <ContactForm />
-            </div>
-          </Drawer>
-        </Toolbar>
-      </AppBar>
+      <SectionAlternate>
+        <Form />
+      </SectionAlternate>
     </div>
   );
 };

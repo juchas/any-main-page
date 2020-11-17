@@ -32,7 +32,7 @@ const Advantages = props => {
       />
       <Grid container spacing={4}>
         {data.map((item, index) => (
-          <Grid key={index} item xs={12} md={3} data-aos="fade-up">
+          <Grid key={index} item xs={12} md={4} data-aos="fade-up">
             <DescriptionListIcon
               title={item.title}
               subtitle={item.subtitle}

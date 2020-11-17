@@ -64,6 +64,7 @@ const useStyles = makeStyles(theme => ({
   },
   listItemButton: {
     whiteSpace: 'nowrap',
+    marginLeft: '20px'
   },
   listItemIcon: {
     minWidth: 'auto',
@@ -96,6 +97,7 @@ const useStyles = makeStyles(theme => ({
   logoImage: {
     width: '100%',
     height: '100%',
+    objectFit: 'cover'
   },
   menu: {
     display: 'flex',
@@ -249,11 +251,11 @@ const Topbar = props => {
     >
       <Toolbar disableGutters className={classes.toolbar}>
         <div className={classes.logoContainer}>
-          <a href="/" title="thefront">
+          <a href="/" title="anyShape">
             <Image
               className={classes.logoImage}
-              src="/images/logos/logo.svg"
-              alt="thefront"
+              src="/images/logos/anyshape.png"
+              alt="anyShape"
               lazy={false}
             />
           </a>
@@ -320,6 +322,14 @@ const Topbar = props => {
               </Typography>
             </ListItem>
             <ListItem className={classes.listItem}>
+            <Button
+                component="a"
+                target="blank"
+                href="https://material-ui.com/store/items/the-front-landing-page/"
+                className={classes.listItemButton}
+              >
+                Sign in
+              </Button>
               <Button
                 size="large"
                 variant="contained"
@@ -329,7 +339,7 @@ const Topbar = props => {
                 href="https://material-ui.com/store/items/the-front-landing-page/"
                 className={classes.listItemButton}
               >
-                Buy Now
+                Sign up free
               </Button>
             </ListItem>
           </List>
