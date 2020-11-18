@@ -48,7 +48,7 @@ const Hero = props => {
                 easy
               </span>
             }
-            subtitle="For entrepreneurs, startups and freelancers. Discover coworking spaces designed to inspire and to connect you to a community of motivated people."
+            subtitle="For Paulina, Rafal, and even Dariusz. Discover coworking spaces designed to inspire and to connect you to a community of motivated people."
             ctaGroup={[
               <ColorButton
                 variant="contained"
