@@ -44,7 +44,7 @@ const Hero = props => {
           <SectionHeader
             title={
               <span>
-                Coworking made{' '}
+                WebAR made{' '}
                 easy
               </span>
             }
