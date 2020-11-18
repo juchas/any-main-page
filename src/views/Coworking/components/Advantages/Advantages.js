@@ -21,10 +21,7 @@ const Advantages = props => {
       <SectionHeader
         title={
           <span>
-            We are reimagining renting to help you{' '}
-            <span className="text-highlighted__primary">
-              achieve your dreams
-            </span>
+            We are reimagining renting to help you{' '} achieve your dreams
           </span>
         }
         subtitle="Our mission is to help you grow your business, meet and connect with people who share your passions. We help you fulfill your best potential through an engaging lifestyle experience."
@@ -32,7 +29,7 @@ const Advantages = props => {
       />
       <Grid container spacing={4}>
         {data.map((item, index) => (
-          <Grid key={index} item xs={12} md={3} data-aos="fade-up">
+          <Grid key={index} item xs={12} md={4} data-aos="fade-up">
             <DescriptionListIcon
               title={item.title}
               subtitle={item.subtitle}
@@ -40,7 +37,7 @@ const Advantages = props => {
                 <Icon
                   fontIconClass={item.icon}
                   size="medium"
-                  fontIconColor={colors.indigo[500]}
+                  fontIconColor={colors.grey[900]}
                 />
               }
             />

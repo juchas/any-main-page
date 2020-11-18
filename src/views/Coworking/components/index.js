@@ -7,4 +7,7 @@ export { default as Locations } from './Locations';
 export { default as MapHero } from './MapHero';
 export { default as Props } from './Props';
 export { default as Reviews } from './Reviews';
+export { default as ReviewsV2 } from './ReviewsV2';
 export { default as Spaces } from './Spaces';
+export { default as FeaturedProperties } from './FeaturedProperties';
+export { default as Form } from './Form';

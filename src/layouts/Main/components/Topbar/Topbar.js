@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -19,6 +19,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { Image } from 'components/atoms';
+import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,18 +44,18 @@ const useStyles = makeStyles(theme => ({
   navLink: {
     fontWeight: 300,
     '&:hover': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.grey[900],
     },
   },
   listItem: {
     cursor: 'pointer',
     '&:hover > .menu-item, &:hover svg': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.grey[900],
     },
   },
   listItemActive: {
     '&> .menu-item': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.grey[900],
     },
   },
   listItemText: {
@@ -64,6 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
   listItemButton: {
     whiteSpace: 'nowrap',
+    marginLeft: '20px'
   },
   listItemIcon: {
     minWidth: 'auto',
@@ -83,7 +85,7 @@ const useStyles = makeStyles(theme => ({
   },
   expandOpen: {
     transform: 'rotate(180deg)',
-    color: theme.palette.primary.dark,
+    color: theme.palette.grey[900],
   },
   logoContainer: {
     width: 100,
@@ -96,6 +98,7 @@ const useStyles = makeStyles(theme => ({
   logoImage: {
     width: '100%',
     height: '100%',
+    objectFit: 'cover'
   },
   menu: {
     display: 'flex',
@@ -114,6 +117,16 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
   },
 }));
+
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(grey[900]),
+    backgroundColor: grey[900],
+    '&:hover': {
+      backgroundColor: grey[700],
+    },
+  },
+}))(Button);
 
 const Topbar = props => {
   const { className, onSidebarOpen, pages, ...rest } = props;
@@ -249,11 +262,11 @@ const Topbar = props => {
     >
       <Toolbar disableGutters className={classes.toolbar}>
         <div className={classes.logoContainer}>
-          <a href="/" title="thefront">
+          <a href="/" title="anyShape">
             <Image
               className={classes.logoImage}
-              src="/images/logos/logo.svg"
-              alt="thefront"
+              src="/images/logos/anyshape.png"
+              alt="anyShape"
               lazy={false}
             />
           </a>
@@ -320,7 +333,15 @@ const Topbar = props => {
               </Typography>
             </ListItem>
             <ListItem className={classes.listItem}>
-              <Button
+            <Button
+                component="a"
+                target="blank"
+                href="https://material-ui.com/store/items/the-front-landing-page/"
+                className={classes.listItemButton}
+              >
+                Sign in
+              </Button>
+              <ColorButton
                 size="large"
                 variant="contained"
                 color="primary"
@@ -329,8 +350,8 @@ const Topbar = props => {
                 href="https://material-ui.com/store/items/the-front-landing-page/"
                 className={classes.listItemButton}
               >
-                Buy Now
-              </Button>
+                Sign up free
+              </ColorButton>
             </ListItem>
           </List>
         </Hidden>

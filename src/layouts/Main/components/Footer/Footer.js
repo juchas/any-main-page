@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(12, 0),
     },
-    background: '#1b1642',
+    background: '#212121',
   },
   footerContainer: {
     maxWidth: 1100,
@@ -40,6 +40,7 @@ const useStyles = makeStyles(theme => ({
   logoImage: {
     width: '100%',
     height: '100%',
+    objectFit: 'cover',
   },
   groupTitle: {
     textTransform: 'uppercase',
@@ -192,11 +193,11 @@ const Footer = props => {
             <List disablePadding>
               <ListItem disableGutters className={classes.logoContainerItem}>
                 <div className={classes.logoContainer}>
-                  <a href="/" title="thefront">
+                  <a href="/" title="anyShape">
                     <Image
                       className={classes.logoImage}
-                      src="/images/logos/logo-negative.svg"
-                      alt="thefront"
+                      src="/images/logos/anyshape-negative.png"
+                      alt="anyShape"
                       lazy={false}
                     />
                   </a>

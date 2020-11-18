@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 
 import { useMediaQuery, Button } from '@material-ui/core';
 import { SectionHeader, SwiperImage } from 'components/molecules';
 import { HeroShaped } from 'components/organisms';
+
+import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -15,6 +17,16 @@ const useStyles = makeStyles(theme => ({
     padding: `${theme.spacing(2)}px !important`,
   },
 }));
+
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(grey[900]),
+    backgroundColor: grey[900],
+    '&:hover': {
+      backgroundColor: grey[700],
+    },
+  },
+}))(Button);
 
 const Hero = props => {
   const { className, ...rest } = props;
@@ -33,25 +45,25 @@ const Hero = props => {
             title={
               <span>
                 Coworking made{' '}
-                <span className="text-highlighted__primary">easy</span>
+                easy
               </span>
             }
             subtitle="For entrepreneurs, startups and freelancers. Discover coworking spaces designed to inspire and to connect you to a community of motivated people."
             ctaGroup={[
-              <Button
+              <ColorButton
                 variant="contained"
                 color="primary"
                 size={isMd ? 'large' : 'medium'}
               >
                 Book
-              </Button>,
-              <Button
-                variant="outlined"
+              </ColorButton>,
+              <ColorButton
+                variant="contained"
                 color="primary"
                 size={isMd ? 'large' : 'medium'}
               >
                 Browse
-              </Button>,
+              </ColorButton>,
             ]}
             align="left"
             titleVariant="h3"

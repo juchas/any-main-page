@@ -57,12 +57,12 @@ const Routes = () => {
     <Switch>
       <Redirect exact from="/" to="/home" />
       <RouteWithLayout
-        component={HomeView}
+        component={CoworkingView}
         exact
         layout={MainLayout}
         path="/home"
       />
-      <RouteWithLayout
+      {/* <RouteWithLayout
         component={CareerListingView}
         exact
         layout={MainLayout}
@@ -313,7 +313,7 @@ const Routes = () => {
         exact
         layout={MainLayout}
         path="/account/:pageId?"
-      />
+      /> */}
       <RouteWithLayout
         component={NotFoundView}
         exact
