@@ -69,23 +69,26 @@ const Hero = props => {
             titleVariant="h3"
           />
         }
+
+        // Juchas - I'm chaging originall images to our own images //
+
         rightSide={
           <SwiperImage
             navigationButtonStyle={classes.swiperNavButton}
             items={[
               {
-                src: '/images/photos/coworking/place1.jpg',
-                srcSet: '/images/photos/coworking/place1@2x.jpg 2x',
+                src: '/images/photos/anyshape/ar-photo-1x2.JPG',
+                srcSet: '/images/photos/anyshape/ar-photo-1.JPG 2x',
                 alt: '...',
               },
               {
-                src: '/images/photos/coworking/place2.jpg',
-                srcSet: '/images/photos/coworking/place2@2x.jpg 2x',
+                src: '/images/photos/anyshape/ar-photo-2x2.JPG',
+                srcSet: '/images/photos/anyshape/ar-photo-2.JPG 2x',
                 alt: '...',
               },
               {
-                src: '/images/photos/coworking/place3.jpg',
-                srcSet: '/images/photos/coworking/place3@2x.jpg 2x',
+                src: '/images/photos/anyshape/ar-photo-3x2.JPG',
+                srcSet: '/images/photos/anyshape/ar-photo-3.JPG 2x',
                 alt: '...',
               },
             ]}
