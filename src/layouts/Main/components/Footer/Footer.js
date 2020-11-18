@@ -196,7 +196,7 @@ const Footer = props => {
                   <a href="/" title="anyShape">
                     <Image
                       className={classes.logoImage}
-                      src="/images/logos/anyshape-negative.png"
+                      src="assets/images/logo/anyshape-negative.png"
                       alt="anyShape"
                       lazy={false}
                     />
