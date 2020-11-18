@@ -265,7 +265,7 @@ const Topbar = props => {
           <a href="/" title="anyShape">
             <Image
               className={classes.logoImage}
-              src="/images/logos/anyshape.png"
+              src="assets/images/logo/anyshape.png"
               alt="anyShape"
               lazy={false}
             />
