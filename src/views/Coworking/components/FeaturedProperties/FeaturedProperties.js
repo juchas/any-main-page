@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import {
   useMediaQuery,
   colors,
@@ -18,6 +18,19 @@ import {
   Button,
 } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
+
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.grey[900],
+    borderColor: theme.palette.grey[900],
+    backgroundColor: theme.palette.common.white,
+    '&:hover': {
+      color: theme.palette.grey[700],
+      borderColor: theme.palette.grey[700],
+      backgroundColor: theme.palette.common.white,
+    },
+  },
+}))(Button);
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -161,12 +174,12 @@ const FeaturedProperties = props => {
           </Grid>
         ))}
         <Grid item xs={12} container justify="center" data-aos="fade-up">
-          <Button 
+          <ColorButton 
               variant="outlined" 
               color="primary"
               href="https://app.anyshape.io/">
             See all list
-          </Button>
+          </ColorButton>
         </Grid>
       </Grid>
     </div>

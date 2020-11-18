@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -19,6 +19,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { Image } from 'components/atoms';
+import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,18 +44,18 @@ const useStyles = makeStyles(theme => ({
   navLink: {
     fontWeight: 300,
     '&:hover': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.grey[900],
     },
   },
   listItem: {
     cursor: 'pointer',
     '&:hover > .menu-item, &:hover svg': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.grey[900],
     },
   },
   listItemActive: {
     '&> .menu-item': {
-      color: theme.palette.primary.dark,
+      color: theme.palette.grey[900],
     },
   },
   listItemText: {
@@ -84,7 +85,7 @@ const useStyles = makeStyles(theme => ({
   },
   expandOpen: {
     transform: 'rotate(180deg)',
-    color: theme.palette.primary.dark,
+    color: theme.palette.grey[900],
   },
   logoContainer: {
     width: 100,
@@ -116,6 +117,16 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
   },
 }));
+
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(grey[900]),
+    backgroundColor: grey[900],
+    '&:hover': {
+      backgroundColor: grey[700],
+    },
+  },
+}))(Button);
 
 const Topbar = props => {
   const { className, onSidebarOpen, pages, ...rest } = props;
@@ -330,7 +341,7 @@ const Topbar = props => {
               >
                 Sign in
               </Button>
-              <Button
+              <ColorButton
                 size="large"
                 variant="contained"
                 color="primary"
@@ -340,7 +351,7 @@ const Topbar = props => {
                 className={classes.listItemButton}
               >
                 Sign up free
-              </Button>
+              </ColorButton>
             </ListItem>
           </List>
         </Hidden>

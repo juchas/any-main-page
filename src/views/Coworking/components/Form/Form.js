@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, withStyles } from '@material-ui/core/styles';
 import {
   useMediaQuery,
   Grid,
@@ -10,6 +10,16 @@ import {
   Button,
 } from '@material-ui/core';
 import { SectionHeader } from 'components/molecules';
+
+const ColorButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(theme.palette.grey[900]),
+    backgroundColor: theme.palette.grey[900],
+    '&:hover': {
+      backgroundColor: theme.palette.grey[700],
+    },
+  },
+}))(Button);
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -108,14 +118,14 @@ const Form = props => {
             />
           </Grid>
           <Grid item container justify="center" xs={12}>
-            <Button
+            <ColorButton
               variant="contained"
               type="submit"
               color="primary"
               size="large"
             >
               submit
-            </Button>
+            </ColorButton>
           </Grid>
         </Grid>
       </div>

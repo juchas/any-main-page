@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
       width: theme.spacing(6),
       height: theme.spacing(6),
       padding: theme.spacing(3),
-      background: colors.indigo[500],
+      background: theme.palette.grey[900],
       borderRadius: '100%',
       boxShadow: '0 2px 10px 0 rgba(23,70,161,.11)',
       '&:after': {

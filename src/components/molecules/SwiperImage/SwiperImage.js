@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
       width: theme.spacing(2),
       height: theme.spacing(2),
       padding: theme.spacing(1),
-      background: colors.indigo[900],
+      background: theme.palette.grey[900],
       borderRadius: '100%',
       position: 'relative',
       boxShadow: '0 2px 10px 0 rgba(23,70,161,.11)',
@@ -69,6 +69,10 @@ const SwiperImage = props => {
   React.useEffect(() => {
     new Swiper('.swiper-container', {
       slidesPerView: 1,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
       spaceBetween: 0,
       navigation: {
         nextEl: '.swiper-container .swiper-button-next',
