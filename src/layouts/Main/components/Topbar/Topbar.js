@@ -262,7 +262,7 @@ const Topbar = props => {
     >
       <Toolbar disableGutters className={classes.toolbar}>
         <div className={classes.logoContainer}>
-          <a href="/" title="anyShape">
+          <a href="/" title="AnyShape">
             <Image
               className={classes.logoImage}
               src="assets/images/logo/anyshape.png"
@@ -320,6 +320,20 @@ const Topbar = props => {
                 </Popover>
               </div>
             ))}
+            <ListItem className={classes.listItem}>
+              <Typography
+                variant="body1"
+                color="textSecondary"
+                className={classes.listItemText}
+                component="a"
+                target="blank"
+                // JUPI : Replacing with our link to the anyshape help page
+                //href="https://thefront-styleguide.maccarianagency.com/"
+                href="https://app.anyshape.io"
+              >
+                Explore
+              </Typography>
+            </ListItem>
             <ListItem className={classes.listItem}>
               <Typography
                 variant="body1"
