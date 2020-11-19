@@ -327,7 +327,9 @@ const Topbar = props => {
                 className={classes.listItemText}
                 component="a"
                 target="blank"
-                href="https://thefront-styleguide.maccarianagency.com/"
+                // JUPI : Replacing with our link to the anyshape help page
+                //href="https://thefront-styleguide.maccarianagency.com/"
+                href="https://help.anyshape.io"
               >
                 Documentation
               </Typography>
@@ -336,7 +338,9 @@ const Topbar = props => {
             <Button
                 component="a"
                 target="blank"
-                href="https://material-ui.com/store/items/the-front-landing-page/"
+                // JUPI - replacing original link with our link to the login page
+                //href="https://material-ui.com/store/items/the-front-landing-page/"
+                href="https://app.anyshape.io/login"
                 className={classes.listItemButton}
               >
                 Sign in
@@ -347,7 +351,9 @@ const Topbar = props => {
                 color="primary"
                 component="a"
                 target="blank"
-                href="https://material-ui.com/store/items/the-front-landing-page/"
+                // JUPI - same thing here like with the login button
+                //href="https://material-ui.com/store/items/the-front-landing-page/"
+                href="https://app.anyshape.io/login"
                 className={classes.listItemButton}
               >
                 Sign up free

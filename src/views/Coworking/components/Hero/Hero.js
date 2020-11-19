@@ -48,7 +48,8 @@ const Hero = props => {
                 easy
               </span>
             }
-            subtitle="For Paulina, Rafal, and even Dariusz. Discover coworking spaces designed to inspire and to connect you to a community of motivated people."
+            //subtitle="For Paulina, Rafal, and even Dariusz. Discover coworking spaces designed to inspire and to connect you to a community of motivated people."
+            subtitle="Thanks to AnyShape.io in less than 5 minutes you can add WebAR capabilities to your website and increase your company growth by higher conversion into sales."
             ctaGroup={[
               <ColorButton
                 variant="contained"
